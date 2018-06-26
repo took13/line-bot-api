@@ -12,8 +12,8 @@ if (!empty($bot->isEvents)) {
 	    $displayName = $profile['displayName'];
 	    $statusMessage = $profile['statusMessage'];
 	    $pictureUrl = $profile['pictureUrl'];
-		
-	    $bot->replyMessageNew($bot->replyToken, json_encode($displayName));
+	
+	    $bot->replyMessageNew($bot->replyToken, $displayName);
 	    if ($bot->isSuccess()) {
 		echo 'Succeeded!';
 		exit();
