@@ -22,6 +22,10 @@ if (!empty($bot->isEvents)) {
 		$reply_message = "GT 1A : 22.5 MW" . "\r\n" 
 				. "GT 1B : 23.4 MW" . "\r\n" 
 				. "GT 1C : Shutdown";
+	} else if (strpos($text,'#cfb') !== false){
+		$reply_message = "CFB1 : 117.88 MW" . "\r\n"
+				. "CFB2 : 118.80 MW" . "\r\n"
+				. "CFB3 : 110.70 MW" . "\r\n"
 	} else {
 		$reply_message = "Hello " . $displayName . ", how may I assist you today?";		
 	}
