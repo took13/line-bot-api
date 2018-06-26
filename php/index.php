@@ -16,7 +16,7 @@ if (!empty($bot->isEvents)) {
 	}
 	
 	if (strpos($text, '#gspp1') !== false){
-		$reply_message = 'unit1 : 35.8 mw' . '\xA' . 'unit 2 : 33.6 mw';
+		$reply_message = "unit1 : 35.8 mw" . "\r\n" . "unit 2 : 33.6 mw";
 	} else if ($text == '#ge'){
 		$reply_message = '1a : 22.5 mw' . '\xA' . '1b : 23.4 mw';
 	} else {
