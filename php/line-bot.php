@@ -32,7 +32,7 @@ class BOT_API extends LINEBot {
     public $message         = null;
     public $timestamp       = null;
     public $userId	    = null;
-    public $reply_text	    = null;
+    public $event_text	    = null;
 	
     public $response        = null;
 	
@@ -61,7 +61,7 @@ class BOT_API extends LINEBot {
                 $this->message    = (object) $event['message'];
                 $this->timestamp  = $event['timestamp'];
 		$this->userId	  = $event['source']['userId'];
-		$this->reply_text = $event['message']['text'];
+		$this->event_text = $event['message']['text'];
 				
                 if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
                     $this->isText = true;
