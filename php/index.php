@@ -15,9 +15,9 @@ if (!empty($bot->isEvents)) {
 	    $pictureUrl = $profile['pictureUrl'];
 	}
 	
-	if (strpos($text, '#gspp1') !== false){
+	if ($text == '#gspp1'){
 		$reply_message = 'unit1 : 35.8 mw' . '\n' . 'unit 2 : 33.6 mw';
-	} else if (strpos($text, '#ge') !== false){
+	} else if ($text == '#ge'){
 		$reply_message = '1a : 22.5 mw' . '\n' . '1b : 23.4 mw';
 	} else {
 		$reply_message = "Hello " . $displayName . ", how may I assist you today?";		
