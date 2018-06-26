@@ -30,8 +30,8 @@ if (!empty($bot->isEvents)) {
 				. "CFB2 : 118.80 MW" . "\r\n"
 				. "CFB3 : 110.70 MW";
 	} else if ($text == '#getrend'){
-		$originalUrl = "https://drive.google.com/file/d/10jB5rNSA0rt5NOkVGW-g7bjHVb533z4i/view?usp=sharing";
-		$previewUrl = "https://drive.google.com/file/d/10jB5rNSA0rt5NOkVGW-g7bjHVb533z4i/view?usp=sharing";
+		$originalUrl = "/test.JPG";
+		$previewUrl = "/test.JPG";
 	} else {
 		$reply_message = "Hello " . $displayName . ", how may I assist you today?";		
 	}
