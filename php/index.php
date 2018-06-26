@@ -29,7 +29,7 @@ if (!empty($bot->isEvents)) {
 		$reply_message = "CFB1 : 117.88 MW" . "\r\n"
 				. "CFB2 : 118.80 MW" . "\r\n"
 				. "CFB3 : 110.70 MW";
-	} else if ($text == '#getrend'){{
+	} else if ($text == '#getrend'){
 		$originalUrl = "https://drive.google.com/file/d/10jB5rNSA0rt5NOkVGW-g7bjHVb533z4i/view?usp=sharing";
 		$previewUrl = "https://drive.google.com/file/d/10jB5rNSA0rt5NOkVGW-g7bjHVb533z4i/view?usp=sharing";
 	} else {
