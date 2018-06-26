@@ -25,7 +25,7 @@ if (!empty($bot->isEvents)) {
 	} else if (strpos($text,'#cfb') !== false){
 		$reply_message = "CFB1 : 117.88 MW" . "\r\n"
 				. "CFB2 : 118.80 MW" . "\r\n"
-				. "CFB3 : 110.70 MW" . "\r\n"
+				. "CFB3 : 110.70 MW";
 	} else {
 		$reply_message = "Hello " . $displayName . ", how may I assist you today?";		
 	}
