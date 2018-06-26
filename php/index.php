@@ -5,14 +5,21 @@ $access_token  = 'XCBJd9Dqc1kfB/VLFnVuEWJ/AjkLXgLdLnSbGuqXeMDwvpfV/XF3iHVtZNso7J
 $bot = new BOT_API($channelSecret, $access_token);
 	
 if (!empty($bot->isEvents)) {
-    $profile = $bot->getProfile($bot->userId);
-    $res = $profile->getJSONDecodeBody();
-	//echo json_encode($profile);
-    $bot->replyMessageNew($bot->replyToken, json_encode($res['displayName']));
-    if ($bot->isSuccess()) {
-        echo 'Succeeded!';
-        exit();
-    }	
+	
+	$res = $bot->getProfile($bot->userId);
+	if ($res->isSucceeded()) {
+	    $profile = $res->getJSONDecodedBody();
+	    $displayName = $profile['displayName'];
+	    $statusMessage = $profile['statusMessage'];
+	    $pictureUrl = $profile['pictureUrl'];
+		
+	    $bot->replyMessageNew($bot->replyToken, json_encode($displayName));
+	    if ($bot->isSuccess()) {
+		echo 'Succeeded!';
+		exit();
+	    }			
+	}
+
     // Failed
     echo $bot->response->getHTTPStatus . ' ' . $bot->response->getRawBody(); 
     exit();
