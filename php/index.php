@@ -7,12 +7,19 @@ $bot = new BOT_API($channelSecret, $access_token);
 if (!empty($bot->isEvents)) {
 $reply_token = $bot->replyToken;
 $user_message = $bot->message;
-//$profile = $bot->userProfile($reply_token);
-    $bot->replyMessageNew($reply_token, $bot->userId);
+$res = $bot->getProfile($bot->userId);
+if ($res->isSucceeded()){
+$profile = $res->getJSONDecodedBody();
+	
+	//$profile = $bot->userProfile($reply_token);
+    $bot->replyMessageNew($reply_token, $profile['displayName']);
     if ($bot->isSuccess()) {
         echo 'Succeeded!';
         exit();
-    }
+    }	
+	
+{
+
     // Failed
     echo $bot->response->getHTTPStatus . ' ' . $bot->response->getRawBody(); 
     exit();
