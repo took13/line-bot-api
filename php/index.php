@@ -1,6 +1,5 @@
 <?php
 include ('line-bot.php');
-include ('vendor/autoload.php');
 $channelSecret = 'd831e7e4bd15e966b258ed6757a9cb99';
 $access_token  = 'XCBJd9Dqc1kfB/VLFnVuEWJ/AjkLXgLdLnSbGuqXeMDwvpfV/XF3iHVtZNso7Jq4onCK9fmbHQ8MZsgrU7ZjCS1+tQk+STz2/0gm4Juod3sG7lRtRmv6bRGtGPAZABQqH3593dxp7W+ladz/KDMR0gdB04t89/1O/w1cDnyilFU=';
 $bot = new BOT_API($channelSecret, $access_token);
@@ -9,24 +8,13 @@ if (!empty($bot->isEvents)) {
 //$reply_token = $bot->replyToken;
 //$user_message = $bot->message;
 
-//$profile = $bot->userProfile($reply_token);
-    //$bot->replyMessageNew($reply_token, $bot->userId);
-    //if ($bot->isSuccess()) {
-    //    echo 'Succeeded!';
-    //    exit();
-    //}	
+    $profile = $bot->userProfile($access_token,$bot->userId);
+    $bot->replyMessageNew($reply_token, json_encode($profile));
+    if ($bot->isSuccess()) {
+        echo 'Succeeded!';
+        exit();
+    }	
     // Failed
-    //echo $bot->response->getHTTPStatus . ' ' . $bot->response->getRawBody(); 
-    //exit();
-	
-$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
-$bot222 = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
-$response = $bot222->getProfile('U70d47203f6cc9a3cce3f81a88a177e89');
-if ($response->isSucceeded()) {
-    $profile = $response->getJSONDecodedBody();
-    echo $profile['displayName'];
-    echo $profile['pictureUrl'];
-    echo $profile['statusMessage'];
-}
-	
+    echo $bot->response->getHTTPStatus . ' ' . $bot->response->getRawBody(); 
+    exit();
 }
