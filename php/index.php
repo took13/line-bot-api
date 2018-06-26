@@ -17,7 +17,7 @@ if (!empty($bot->isEvents)) {
 	
 	if (strpos($text, '#g1') !== false){
 		$reply_message = "Unit 1 : 35.8 MW" . "\r\n" . "Unit 2 : 33.6 MW";
-	} else if (strpos($text, '#ge'){
+	} else if (strpos($text, '#ge') !== false){
 		$reply_message = "1A : 22.5 MW" . "\r\n" . "1B : 23.4 MW" . "\r\n" . "1C : 23.4 MW";
 	} else {
 		$reply_message = "Hello " . $displayName . ", how may I assist you today?";		
