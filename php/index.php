@@ -12,7 +12,7 @@ if (!empty($bot->isEvents)) {
 	    $displayName = $profile['displayName'];
 	    $statusMessage = $profile['statusMessage'];
 	    $pictureUrl = $profile['pictureUrl'];
-	    $message = "Hello, " . $displayName . ". Can I help you ?";
+	    $message = "Hello " . $displayName . ", how may I assist you today?";
 	    $bot->replyMessageNew($bot->replyToken, $message);
 	    if ($bot->isSuccess()) {
 		echo 'Succeeded!';
