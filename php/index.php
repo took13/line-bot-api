@@ -15,10 +15,10 @@ if (!empty($bot->isEvents)) {
 	    $pictureUrl = $profile['pictureUrl'];
 	}
 	
-	if (strpos($text, '#gspp1') !== false){
-		$reply_message = "unit1 : 35.8 mw" . "\r\n" . "unit 2 : 33.6 mw";
-	} else if ($text == '#ge'){
-		$reply_message = '1a : 22.5 mw' . '\xA' . '1b : 23.4 mw';
+	if (strpos($text, '#g1') !== false){
+		$reply_message = "Unit 1 : 35.8 MW" . "\r\n" . "Unit 2 : 33.6 MW";
+	} else if (strpos($text, '#ge'){
+		$reply_message = "1A : 22.5 MW" .  "\r\n" . "1B : 23.4 MW".  "\r\n" . "1C : 23.4 MW";
 	} else {
 		$reply_message = "Hello " . $displayName . ", how may I assist you today?";		
 	}
