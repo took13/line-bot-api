@@ -30,8 +30,8 @@ if (!empty($bot->isEvents)) {
 				. "CFB2 : 118.80 MW" . "\r\n"
 				. "CFB3 : 110.70 MW";
 	} else if ($text == '#getrend'){
-		$originalUrl = "http://static.zymergi.com/blog-pipb-trend.png";
-		$previewUrl = "http://static.zymergi.com/blog-pipb-trend.png";
+		$originalUrl = "http://blog.dataparcsolutions.com/wp-content/uploads/2015/09/troubleshooting.jpg";
+		$previewUrl = "http://blog.dataparcsolutions.com/wp-content/uploads/2015/09/troubleshooting.jpg";
 	} else {
 		$reply_message = "Hello " . $displayName . ", how may I assist you today?";		
 	}
