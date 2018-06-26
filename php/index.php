@@ -30,8 +30,8 @@ if (!empty($bot->isEvents)) {
 				. "CFB2 : 118.80 MW" . "\r\n"
 				. "CFB3 : 110.70 MW";
 	} else if ($text == '#getrend'){
-		$originalUrl = "/test.JPG";
-		$previewUrl = "/test.JPG";
+		$originalUrl = "https://ibb.co/fjsSH8";
+		$previewUrl = "https://ibb.co/fjsSH8";
 	} else {
 		$reply_message = "Hello " . $displayName . ", how may I assist you today?";		
 	}
