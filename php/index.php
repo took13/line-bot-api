@@ -18,9 +18,9 @@ if (!empty($bot->isEvents)) {
     //echo $bot->response->getHTTPStatus . ' ' . $bot->response->getRawBody(); 
     //exit();
 	
-//$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
-//$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
-$response = $bot->getProfile($bot->userId);
+$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
+$bot222 = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
+$response = $bot222->getProfile($bot->userId);
 if ($response->isSucceeded()) {
     $profile = $response->getJSONDecodedBody();
     echo $profile['displayName'];
