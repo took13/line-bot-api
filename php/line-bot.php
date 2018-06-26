@@ -118,11 +118,11 @@ class BOT_API extends LINEBot {
 		
     }
 	
-    public static function userProfile($replyToken) {
-	$ch = curl_init('https://api.line.me/v2/profile');
+    public static function userProfile($access_token, $userId) {
+	$ch = curl_init('https://api.line.me/v2/profile/' . $userId);
 		
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, [ 'Authorization: Bearer ' . $replyToken ]);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [ 'Authorization: Bearer ' . $access_token ]);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 
         $result = curl_exec($ch);
