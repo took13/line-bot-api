@@ -15,13 +15,21 @@ if (!empty($bot->isEvents)) {
 	    $pictureUrl = $profile['pictureUrl'];
 	}
 	
-    $reply_message = "Hello " . $displayName . ", how may I assist you today?";
-    $bot->replyMessageNew($bot->replyToken, $reply_message);
-    if ($bot->isSuccess()) {
-	echo 'Succeeded!';
+	if (strstr($text, '#gspp1')){
+		$reply_message = 'unit1 : 35.8 mw' . '\n' . 'unit 2 : 33.6 mw';
+	} else if (strstr($text, '#ge')){
+		$reply_message = '1a : 22.5 mw' . 'n' . '1b : 23.4 mw';
+	} else {
+		$reply_message = "Hello " . $displayName . ", how may I assist you today?";		
+	}
+	
+
+	$bot->replyMessageNew($bot->replyToken, $reply_message);
+	if ($bot->isSuccess()) {
+		echo 'Succeeded!';
+		exit();
+	}	
+	// Failed
+	echo $bot->response->getHTTPStatus . ' ' . $bot->response->getRawBody(); 
 	exit();
-    }	
-    // Failed
-    echo $bot->response->getHTTPStatus . ' ' . $bot->response->getRawBody(); 
-    exit();
 }
