@@ -20,7 +20,7 @@ if (!empty($bot->isEvents)) {
 	
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot222 = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
-$response = $bot222->getProfile($bot->userId);
+$response = $bot222->getProfile('U70d47203f6cc9a3cce3f81a88a177e89');
 if ($response->isSucceeded()) {
     $profile = $response->getJSONDecodedBody();
     echo $profile['displayName'];
