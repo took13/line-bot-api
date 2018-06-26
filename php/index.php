@@ -24,7 +24,7 @@ if (!empty($bot->isEvents)) {
 	}
 	
 
-	$bot->replyMessageNew($bot->replyToken, $reply_message);
+	$bot->replyMessageNew($bot->replyToken, $text);
 	if ($bot->isSuccess()) {
 		echo 'Succeeded!';
 		exit();
