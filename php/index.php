@@ -18,8 +18,8 @@ if (!empty($bot->isEvents)) {
     //echo $bot->response->getHTTPStatus . ' ' . $bot->response->getRawBody(); 
     //exit();
 	
-$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
-$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
+//$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
+//$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 $response = $bot->getProfile($bot->userId);
 if ($response->isSucceeded()) {
     $profile = $response->getJSONDecodedBody();
