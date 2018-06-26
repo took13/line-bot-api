@@ -5,9 +5,9 @@ $access_token  = 'XCBJd9Dqc1kfB/VLFnVuEWJ/AjkLXgLdLnSbGuqXeMDwvpfV/XF3iHVtZNso7J
 $bot = new BOT_API($channelSecret, $access_token);
 	
 if (!empty($bot->isEvents)) {
-    $profile = $bot->getProfile('U70d47203f6cc9a3cce3f81a88a177e89');
+    $profile = $bot->getProfile($bot->userId);
 	//echo json_encode($profile);
-    $bot->replyMessageNew($bot->replyToken, $profile);
+    $bot->replyMessageNew($bot->replyToken, json_encode($profile));
     if ($bot->isSuccess()) {
         echo 'Succeeded!';
         exit();
