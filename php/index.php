@@ -5,16 +5,27 @@ $access_token  = 'XCBJd9Dqc1kfB/VLFnVuEWJ/AjkLXgLdLnSbGuqXeMDwvpfV/XF3iHVtZNso7J
 $bot = new BOT_API($channelSecret, $access_token);
 	
 if (!empty($bot->isEvents)) {
-$reply_token = $bot->replyToken;
-$user_message = $bot->message;
+//$reply_token = $bot->replyToken;
+//$user_message = $bot->message;
 
 //$profile = $bot->userProfile($reply_token);
-    $bot->replyMessageNew($reply_token, $bot->userId);
-    if ($bot->isSuccess()) {
-        echo 'Succeeded!';
-        exit();
-    }	
+    //$bot->replyMessageNew($reply_token, $bot->userId);
+    //if ($bot->isSuccess()) {
+    //    echo 'Succeeded!';
+    //    exit();
+    //}	
     // Failed
-    echo $bot->response->getHTTPStatus . ' ' . $bot->response->getRawBody(); 
-    exit();
+    //echo $bot->response->getHTTPStatus . ' ' . $bot->response->getRawBody(); 
+    //exit();
+	
+$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
+$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
+$response = $bot->getProfile($bot->userId);
+if ($response->isSucceeded()) {
+    $profile = $response->getJSONDecodedBody();
+    echo $profile['displayName'];
+    echo $profile['pictureUrl'];
+    echo $profile['statusMessage'];
+}
+	
 }
