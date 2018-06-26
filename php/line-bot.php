@@ -128,7 +128,7 @@ class BOT_API extends LINEBot {
         $result = curl_exec($ch);
         curl_close($ch);
 
-        return json_decode($userId);
+        return $userId;
     }
 	
 }
