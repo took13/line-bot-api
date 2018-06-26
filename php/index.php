@@ -17,20 +17,21 @@ if (!empty($bot->isEvents)) {
 	    $pictureUrl = $profile['pictureUrl'];
 	}
 	
-	if (strpos($text, '#g1') !== false){
+	//if (strpos($text, '#g1') !== false){
+	if ($text == '#g1'){
 		$reply_message = "Unit 1 : 37.8 MW" . "\r\n" 
 				. "Unit 2 : 41.6 MW";
-	} else if (strpos($text, '#ge') !== false){
+	} else if ($text == '#ge'){
 		$reply_message = "GT 1A : 22.5 MW" . "\r\n" 
 				. "GT 1B : 23.4 MW" . "\r\n" 
 				. "GT 1C : Shutdown";
-	} else if (strpos($text,'#cfb') !== false){
+	} else if ($text == '#cfb'){
 		$reply_message = "CFB1 : 117.88 MW" . "\r\n"
 				. "CFB2 : 118.80 MW" . "\r\n"
 				. "CFB3 : 110.70 MW";
-	} else if (strpos($text,'#trendge') !== false){
-		$originalUrl = "https://cdn.shopify.com/s/files/1/0379/7669/products/sampleset2_1024x1024.JPG?v=1458740363";
-		$previewUrl = "https://cdn.shopify.com/s/files/1/0379/7669/products/sampleset2_1024x1024.JPG?v=1458740363";
+	} else if ($text == '#getrend'){{
+		$originalUrl = "https://drive.google.com/file/d/10jB5rNSA0rt5NOkVGW-g7bjHVb533z4i/view?usp=sharing";
+		$previewUrl = "https://drive.google.com/file/d/10jB5rNSA0rt5NOkVGW-g7bjHVb533z4i/view?usp=sharing";
 	} else {
 		$reply_message = "Hello " . $displayName . ", how may I assist you today?";		
 	}
