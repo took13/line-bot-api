@@ -26,7 +26,7 @@ if (!empty($bot->isEvents)) {
 		$reply_message = "CFB1 : 117.88 MW" . "\r\n"
 				. "CFB2 : 118.80 MW" . "\r\n"
 				. "CFB3 : 110.70 MW";
-	} else if (strpos($text,'#getrend') !== false){
+	} else if (strpos($text,'#trendge') !== false){
 		$img_url = "https://cdn.shopify.com/s/files/1/0379/7669/products/sampleset2_1024x1024.JPG?v=1458740363";
 		$outputText = new LINE\LINEBot\MessageBuilder\ImageMessageBuilder($img_url, $img_url);
 		$response = $bot->replyMessage($event->getReplyToken(), $outputText);
