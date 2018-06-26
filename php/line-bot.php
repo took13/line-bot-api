@@ -93,8 +93,13 @@ class BOT_API extends LINEBot {
         ]);
     }
 	
-    public function replyMessageNew ($replyToken = null, $message = null) {
-        $messageBuilder = new TextMessageBuilder($message);
+    public function replyMessageNew ($replyToken = null, $message = null,$originalUrl = null,$previewUrl = null) {
+	if (is_null($originalUrl)){
+        	$messageBuilder = new TextMessageBuilder($message);		
+	} else {
+		$messageBuilder = new ImageMessageBuilder($originalUrl,$previewUrl);
+	}
+
         $this->response = $this->httpClient->post($this->endpointBase . '/v2/bot/message/reply', [
             'replyToken' => $replyToken,
             'messages'   => $messageBuilder->buildMessage(),
