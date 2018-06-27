@@ -20,7 +20,7 @@ if (!empty($bot->isEvents)) {
 	//if (strpos($text, '#g1') !== false){
 	if ($text == '#g1'){
 		$reply_message = "Unit 1 : 37.8 MW" . "\r\n" 
-				. "Unit 2 : 41.6 MW";
+				. "Unit 2 : 41.6 MW" .  rand(20,30);
 	} else if ($text == '#ge'){
 		$reply_message = "GT 1A : 22.5 MW" . "\r\n" 
 				. "GT 1B : 23.4 MW" . "\r\n" 
