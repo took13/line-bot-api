@@ -30,7 +30,7 @@ if (!empty($bot->isEvents)) {
 				. "CFB2 : 118.80 MW" . "\r\n"
 				. "CFB3 : 110.70 MW";
 	} else if ($text == '#singleline'){
-		$originalUrl = "https://www.picz.in.th/images/2018/06/27/4yMBdg.jpg";
+		$originalUrl = "https://www.picz.in.th/images/2018/06/27/4FdLxJ.jpg";
 		$previewUrl = "https://www.picz.in.th/images/2018/06/27/4yM4nn.jpg";
 	} else if ($text == '#cfb3'){
 		$originalUrl = "https://www.picz.in.th/images/2018/06/27/4FdYMg.jpg";
