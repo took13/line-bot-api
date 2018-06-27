@@ -41,9 +41,9 @@ if (!empty($bot->isEvents)) {
 	} else if ($text == '#trend'){
 		$originalUrl = "https://www.picz.in.th/images/2018/06/27/4Fd41W.jpg";
 		$previewUrl = "https://www.picz.in.th/images/2018/06/27/4Fd0YQ.jpg";
-	} else if ($text == '#video'){
-		$originalUrl = "https://www.dropbox.com/s/4xwem8kaefizlxb/551766571.300296.mp4?dl=0";
-		$previewUrl = "https://www.picz.in.th/images/2018/06/27/4Fd0YQ.jpg";
+	//} else if ($text == '#video'){
+	//	$originalUrl = "https://www.dropbox.com/s/4xwem8kaefizlxb/551766571.300296.mp4?dl=0";
+	//	$previewUrl = "https://www.picz.in.th/images/2018/06/27/4Fd0YQ.jpg";
 	} else {
 		$reply_message = "Hello " . $displayName . ", how may I assist you today?";		
 	}
