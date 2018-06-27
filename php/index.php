@@ -29,9 +29,18 @@ if (!empty($bot->isEvents)) {
 		$reply_message = "CFB1 : 117.88 MW" . "\r\n"
 				. "CFB2 : 118.80 MW" . "\r\n"
 				. "CFB3 : 110.70 MW";
-	} else if ($text == '#trend'){
+	} else if ($text == '#singleline'){
 		$originalUrl = "https://www.picz.in.th/images/2018/06/27/4yMBdg.jpg";
 		$previewUrl = "https://www.picz.in.th/images/2018/06/27/4yM4nn.jpg";
+	} else if ($text == '#cfb3'){
+		$originalUrl = "https://www.picz.in.th/images/2018/06/27/4FdYMg.jpg";
+		$previewUrl = "https://www.picz.in.th/images/2018/06/27/4Fd7RS.jpg";
+	} else if ($text == '#daily'){
+		$originalUrl = "https://www.picz.in.th/images/2018/06/27/4FdSun.jpg";
+		$previewUrl = "https://www.picz.in.th/images/2018/06/27/4FdWVV.jpg";
+	} else if ($text == '#trend'){
+		$originalUrl = "https://www.picz.in.th/images/2018/06/27/4Fd41W.jpg";
+		$previewUrl = "https://www.picz.in.th/images/2018/06/27/4Fd0YQ.jpg";
 	} else {
 		$reply_message = "Hello " . $displayName . ", how may I assist you today?";		
 	}
