@@ -20,7 +20,7 @@ if (!empty($bot->isEvents)) {
 	//if (strpos($text, '#g1') !== false){
 	if ($text == '#g1'){
 		$reply_message = "Unit 1 : 37.8 MW" . "\r\n" 
-				. "Unit 2 : 41.6 MW" .  rand(20,30);
+				. "Unit 2 : 41.6 MW";
 	} else if ($text == '#ge'){
 		$reply_message = "GT 1A : 22.5 MW" . "\r\n" 
 				. "GT 1B : 23.4 MW" . "\r\n" 
@@ -30,8 +30,8 @@ if (!empty($bot->isEvents)) {
 				. "CFB2 : 118.80 MW" . "\r\n"
 				. "CFB3 : 110.70 MW";
 	} else if ($text == '#getrend'){
-		$originalUrl = "http://blog.dataparcsolutions.com/wp-content/uploads/2015/09/troubleshooting.jpg";
-		$previewUrl = "http://blog.dataparcsolutions.com/wp-content/uploads/2015/09/troubleshooting.jpg";
+		$originalUrl = "http://i.imgur.com/SJxeIjX.jpg";
+		$previewUrl = "http://i.imgur.com/SJxeIjX.jpg";
 	} else {
 		$reply_message = "Hello " . $displayName . ", how may I assist you today?";		
 	}
