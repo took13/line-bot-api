@@ -30,8 +30,8 @@ if (!empty($bot->isEvents)) {
 				. "CFB2 : 118.80 MW" . "\r\n"
 				. "CFB3 : 110.70 MW";
 	} else if ($text == '#getrend'){
-		$originalUrl = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
-		$previewUrl = "https://i.pinimg.com/originals/cc/22/d1/cc22d10d9096e70fe3dbe3be2630182b.jpg";
+		$originalUrl = "https://www.picz.in.th/images/2018/06/27/4yFYlN.jpg";
+		$previewUrl = "https://www.picz.in.th/images/2018/06/27/4yFYlN.jpg";
 	} else {
 		$reply_message = "Hello " . $displayName . ", how may I assist you today?";		
 	}
