@@ -42,7 +42,7 @@ if (!empty($bot->isEvents)) {
 		$originalUrl = "https://www.picz.in.th/images/2018/06/27/4Fd41W.jpg";
 		$previewUrl = "https://www.picz.in.th/images/2018/06/27/4Fd0YQ.jpg";
 	} else if ($text == '#video'){
-		$originalUrl = "https://drive.google.com/uc?export=download&id=1Q6vZeF_OU9kpxKnb83KHzMW0ebN1UL_w";
+		$originalUrl = "https://files.fm/u/2hr3uagd#_";
 		$previewUrl = "https://www.picz.in.th/images/2018/06/27/4Fd0YQ.jpg";
 	} else {
 		$reply_message = "Hello " . $displayName . ", how may I assist you today?";		
