@@ -45,17 +45,10 @@ if (!empty($bot->isEvents)) {
 	//	$originalUrl = "https://www.dropbox.com/s/4xwem8kaefizlxb/551766571.300296.mp4?dl=0";
 	//	$previewUrl = "https://www.picz.in.th/images/2018/06/27/4Fd0YQ.jpg";
 	} else if ($text == '#help'){
-		$reply_message = "You can use following commands to show specific results:" . "\r\n"
-				. "#g1 : show MW for GSPP1" . "\r\n\"
-				. "#ge : show MW for Glow Energy" . "\r\n\"
-				. "#cfb : show MW for CFB 1,2,3" . "\r\n\"
-				. "#singleline : show GSPP2&3 single line diagram" . "\r\n\"
-				. "#cfb3 : show CFB3 diagram" . "\r\n\"
-				. "#daily : show daily report" . "\r\n\"
-				. "#trend : show sample trend for Glow Energy";
+		$reply_message = "You can use following commands to show specific results:"."\r\n"."#g1 : show MW for GSPP1"."\r\n\"."#ge : show MW for Glow Energy"."\r\n\"."#cfb : show MW for CFB 1,2,3"."\r\n\"."#singleline : show GSPP2&3 single line diagram"."\r\n\"."#cfb3 : show CFB3 diagram"."\r\n\"."#daily : show daily report"."\r\n\"."#trend : show sample trend for Glow Energy";
 	} else {
 		$reply_message = "Hello " . $displayName . ", how may I assist you today?" . "\r\n" 
-				. "if you need to trial this application, please type #help to get commands description.";		
+				. "if you need to demonstrate this application, please type #help to get commands description.";		
 	}
 	
 
